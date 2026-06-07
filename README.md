@@ -62,7 +62,7 @@ Site-de-presentation/
 │   ├── profil/             # Photos des membres
 │   └── font/               # Illustrations hero
 ├── bootstrap5/             # Bootstrap local
-└── fontawesome6/           # Font Awesome local
+└── fontawesome7/           # Font Awesome local
 ```
 
 ---
