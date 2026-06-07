@@ -2,7 +2,7 @@
 
 ## 🌐 Site en ligne
 
-👉 **[http://site-de-presentation.infinityfreeapp.com/](http://site-de-presentation.infinityfreeapp.com/)**
+👉 **[http://site-de-presentation.infinityfreeapp.com/](https://site-de-presentation.infinityfreeapp.com/)**
 
 ---
 
@@ -40,7 +40,7 @@ Chaque membre apporte une expertise spécifique, permettant à D5-Services de co
 ![FontAwesome](https://img.shields.io/badge/Font_Awesome_7-528DD7?style=flat&logo=fontawesome&logoColor=white)
 ![PHPMailer](https://img.shields.io/badge/PHPMailer-red?style=flat)
 
-- **Frontend** : HTML5, CSS3, Bootstrap 5, Font Awesome 6
+- **Frontend** : HTML5, CSS3, Bootstrap 5, Font Awesome 7
 - **Backend** : PHP, PHPMailer (envoi d'e-mails), MySQL (base de données)
 - **Fonctionnalités** : Formulaire de contact avec pièce jointe, toast notifications, dark/light mode, défilement automatique
 
