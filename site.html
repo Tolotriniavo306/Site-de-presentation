@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D5-Services .Site de présentation</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        /* Styles supplémentaires pour le trait actif */
+        .nav-links li {
+            position: relative;
+        }
+    
+        .nav-links a {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+    
+        .nav-links a.active-link {
+            color: #2563eb;
+        }
+    
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: #2563eb;
+            border-radius: 2px;
+            transition: width 0.3s ease-in-out;
+        }
+    
+        .nav-links a.active-link::after {
+            width: 100%;
+        }
+    
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+    
+        /* Indicateur de défilement automatique */
+        .auto-scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            z-index: 999;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    
+        .auto-scroll-indicator:hover {
+            background: #1d4ed8;
+        }
+    
+        .auto-scroll-indicator.paused {
+            background: #6b7280;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo"><span>D5</span>-Services </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Accueil</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#team" class="nav-link">Équipe</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section id="home" class="hero section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>5 freelances, <br>une seule force créative.</h1>
+                    <p>Nous unissons nos expertises complémentaires pour vous offrir un accompagnement sur-mesure, sans les contraintes d'une agence.</p>
+                    <div class="hero-badges">
+                        <a href="#contact" class="btn">🗓️ Demander un devis</a>
+                        <a href="#team" class="btn btn-outline">👥 Rencontrer l'équipe</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=400&fit=crop" alt="Équipe de freelances">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services preview -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Nos expertises</h2>
+            <p class="section-subtitle">Chaque projet est piloté par le freelance le plus adapté, épaulé par l'équipe.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Développement web</h3>
+                    <p>Sites vitrines, e-commerce, applications sur mesure.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Design UI/UX</h3>
+                    <p>Interfaces modernes, maquettes, expérience utilisateur.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Marketing digital</h3>
+                    <p>SEO, réseaux sociaux, stratégie de contenu.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Rédaction & branding</h3>
+                    <p>Identité visuelle, copywriting, storytelling.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Maintenance & hébergement</h3>
+                    <p>Support technique, mises à jour, sécurité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section" style="background: #f9fafb;">
+        <div class="container">
+            <h2 class="section-title">Les 5 talents</h2>
+            <p class="section-subtitle">Des indépendants, une vision commune.</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie">
+                    <h3>Sophie</h3>
+                    <div class="team-role">Lead Développeuse</div>
+                    <div class="team-tags"><span>React</span><span>Node.js</span><span>API</span></div>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas">
+                    <h3>Thomas</h3>
+                    <div class="team-role">UI/UX Designer</div>
+                    <div class="team-tags"><span>Figma</span><span>Design system</span><span>Prototypage</span></div>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Léa">
+                    <h3>Léa</h3>
+                    <div class="team-role">Stratège SEO</div>
+                    <div class="team-tags"><span>Référencement</span><span>Analytics</span><span>Content</span></div>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Marc">
+                    <h3>Marc</h3>
+                    <div class="team-role">Brand designer</div>
+                    <div class="team-tags"><span>Logo</span><span>Identité</span><span>Packaging</span></div>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Camille">
+                    <h3>Camille</h3>
+                    <div class="team-role">Chef de projet</div>
+                    <div class="team-tags"><span>Coordination</span><span>Support</span><span>Relation client</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Comment on travaille</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>On vous écoute</h3>
+                    <p>Échange gratuit pour cerner vos besoins et vous proposer le freelance idéal.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Devis clair</h3>
+                    <p>Un devis unique, un seul interlocuteur. Pas de mauvaise surprise.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>On réalise ensemble</h3>
+                    <p>Votre projet avance en équipe, avec des points réguliers.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Support inclus</h3>
+                    <p>On assure la maintenance et les ajustements après livraison.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Parlons de votre projet</h2>    
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <input type="text" placeholder="Nom & prénom" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Téléphone">
+                        <textarea rows="5" placeholder="Décrivez votre projet..."></textarea>
+                        <button type="submit" class="btn">Envoyer la demande</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Un interlocuteur unique</h3>
+                    <p><i class="fas fa-envelope"></i> hello@collectif5.fr</p>
+                    <p><i class="fas fa-phone"></i> 06 12 34 56 78</p>
+                    <p><i class="fas fa-clock"></i> Réponse sous 24h ouvrées</p>
+                    <hr style="margin: 1.5rem 0;">
+                    <h3>Collectif 5</h3>
+                    <p>5 freelances complémentaires<br>
+                    Basés à Paris / Lyon / Remote</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Collectif 5 · 5 freelances, une seule équipe · <a href="#" style="color:white">Mentions légales</a></p>
+</footer>
+
+<!-- Indicateur de pause/reprise du scroll automatique -->
+<div class="auto-scroll-indicator" id="scrollToggle">
+    <i class="fas fa-play"></i> Défilement auto actif
+</div>
+
+<script>
+    // ==================== 1. TRAIT BLEU AU SCROLL (lien actif) ====================
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateActiveLink() {
+        let current = '';
+        const scrollPosition = window.scrollY + 150; // décalage pour tenir compte du header sticky
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active-link');
+            const href = link.getAttribute('href').substring(1); // enlève le #
+            if (href === current) {
+                link.classList.add('active-link');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    window.addEventListener('load', updateActiveLink);
+
+    // ==================== 2. DÉFILEMENT AUTOMATIQUE ====================
+    let autoScrollEnabled = true;
+    let autoScrollInterval = null;
+    let currentSectionIndex = 0;
+    let isUserInteracting = false;
+    let interactionTimeout = null;
+
+    // Récupérer toutes les sections dans l'ordre (home, services, team, etc.)
+    const allSections = Array.from(document.querySelectorAll('.section'));
+    // Filtrer pour garder uniquement les sections qui ont un id correspondant aux liens de navigation
+    const orderedSections = allSections.filter(section => {
+        const id = section.getAttribute('id');
+        return id && (id === 'home' || id === 'services' || id === 'team' || id === 'projects' || id === 'contact');
+    });
+
+    // Ordonner manuellement selon l'ordre souhaité
+    const finalSections = [];
+    const order = ['home', 'services', 'team', 'projects', 'contact'];
+    order.forEach(id => {
+        const section = document.getElementById(id);
+        if (section) finalSections.push(section);
+    });
+
+    function scrollToNextSection() {
+        if (!autoScrollEnabled) return;
+        if (isUserInteracting) return;
+
+        // Trouver l'index de la section actuellement visible
+        let visibleIndex = 0;
+        const scrollPosition = window.scrollY + 200;
+
+        for (let i = 0; i < finalSections.length; i++) {
+            const section = finalSections[i];
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.clientHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                visibleIndex = i;
+                break;
+            }
+        }
+
+        // Passer à la suivante, ou revenir à la première si on est à la fin
+        let nextIndex = visibleIndex + 1;
+        if (nextIndex >= finalSections.length) {
+            nextIndex = 0; // boucle infinie
+        }
+
+        const nextSection = finalSections[nextIndex];
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+            currentSectionIndex = nextIndex;
+        }
+    }
+
+    // Démarrer le défilement automatique (toutes les 5 secondes)
+    function startAutoScroll() {
+        if (autoScrollInterval) clearInterval(autoScrollInterval);
+        autoScrollInterval = setInterval(() => {
+            scrollToNextSection();
+        }, 5000); // 5 secondes entre chaque défilement
+    }
+
+    // Arrêter le défilement automatique
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        }
+    }
+
+    // Réinitialiser l'interaction utilisateur
+    function resetUserInteraction() {
+        isUserInteracting = false;
+        if (autoScrollEnabled) {
+            stopAutoScroll();
+            startAutoScroll();
+        }
+        if (interactionTimeout) clearTimeout(interactionTimeout);
+    }
+
+    // Quand l'utilisateur interagit (scroll manuel, clic, survol)
+    function handleUserInteraction() {
+        if (!autoScrollEnabled) return;
+        
+        isUserInteracting = true;
+        stopAutoScroll();
+        
+        if (interactionTimeout) clearTimeout(interactionTimeout);
+        interactionTimeout = setTimeout(() => {
+            isUserInteracting = false;
+            if (autoScrollEnabled) {
+                startAutoScroll();
+            }
+        }, 10000); // Après 10 secondes sans interaction, le défilement reprend
+    }
+
+    // Écouter les événements utilisateur
+    window.addEventListener('scroll', () => {
+        handleUserInteraction();
+        updateActiveLink(); // mettre à jour le lien actif aussi
+    });
+    window.addEventListener('click', handleUserInteraction);
+    window.addEventListener('keydown', handleUserInteraction);
+    document.querySelectorAll('a, button, .btn').forEach(el => {
+        el.addEventListener('click', handleUserInteraction);
+    });
+
+    // Bouton pause/reprise
+    const toggleBtn = document.getElementById('scrollToggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            autoScrollEnabled = !autoScrollEnabled;
+            if (autoScrollEnabled) {
+                isUserInteracting = false;
+                startAutoScroll();
+                this.innerHTML = '<i class="fas fa-play"></i> Défilement auto actif';
+                this.classList.remove('paused');
+            } else {
+                stopAutoScroll();
+                this.innerHTML = '<i class="fas fa-pause"></i> Défilement auto désactivé';
+                this.classList.add('paused');
+            }
+        });
+    }
+
+    // Démarrer le défilement automatique au chargement
+    startAutoScroll();
+
+    // Correction du smooth scroll pour les liens de navigation (ne pas interférer avec l'auto-scroll)
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                handleUserInteraction(); // marquer une interaction utilisateur
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Même chose pour les autres boutons qui pointent vers des ancres
+    document.querySelectorAll('.btn[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                handleUserInteraction();
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
