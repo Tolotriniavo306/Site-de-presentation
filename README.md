@@ -2,7 +2,7 @@
 
 ## 🌐 Site en ligne
 
-👉 **[http://site-de-presentation.infinityfreeapp.com/](https://site-de-presentation.infinityfreeapp.com/)**
+👉 **[https://site-de-presentation.infinityfreeapp.com/](https://site-de-presentation.infinityfreeapp.com/)**
 
 ---
 
