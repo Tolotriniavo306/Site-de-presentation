@@ -8,7 +8,7 @@
 
 ## 👥 5 Jeunes Talents
 
-D5-Services est un collectif de 5 freelanceurs malgaches passionnés par le numérique, réunis autour d'une vision commune : offrir des services informatiques de qualité, accessibles et adaptés aux besoins réels des entreprises et particuliers.
+D5-Services est un collectif de 5 freelancers malgaches passionnés par le numérique, réunis autour d'une vision commune : offrir des services informatiques de qualité, accessibles et adaptés aux besoins réels des entreprises et particuliers.
 
 Chaque membre apporte une expertise spécifique, permettant à D5-Services de couvrir un large spectre de compétences techniques :
 
